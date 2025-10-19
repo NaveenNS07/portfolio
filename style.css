@@ -1,0 +1,1340 @@
+:root {
+    --primary-bg: #1A0D2F; /* Dark purple from the image */
+    --accent-color: #8A2BE2; /* Purple highlight color */
+    --text-color: #FFFFFF;
+    --light-text: #CCCCCC;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-poppins);
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%; /* Adjust padding as needed */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(26, 13, 47, 0.8); /* Slightly transparent background */
+    backdrop-filter: blur(5px);
+}
+
+.logo img {
+    height: 40px; /* Adjust logo size */
+    filter: invert(1); /* If your logo is dark and needs to be white */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    padding-top: 100px; /* Space for fixed header */
+}
+
+section {
+    padding: 80px 5%; /* Consistent horizontal padding */
+    margin-bottom: 50px; /* Space between sections */
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* Adjust as per image */
+    position: relative;
+    overflow: hidden; /* For potential background effects */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Space between avatar and text */
+}
+
+.greeting-avatar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.greeting {
+    font-size: 1.2em;
+    color: var(--light-text);
+    margin-bottom: 5px;
+}
+
+.name {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.avatar img {
+    width: 300px; /* Adjust avatar size */
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* You might need complex CSS for the glow effect */
+    box-shadow: 0 0 50px rgba(138, 43, 226, 0.7); /* Example glow */
+}
+
+.intro-text h2 {
+    font-size: 3.5em;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.intro-text .role {
+    font-size: 1.5em;
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+.intro-text .highlight {
+    color: var(--accent-color);
+    /* For the circle around "cover" */
+    position: relative;
+    display: inline-block;
+}
+
+.intro-text .highlight::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%; /* Adjust size of circle */
+    height: 120%; /* Adjust size of circle */
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.intro-text .tagline {
+    font-size: 1em;
+    color: var(--light-text);
+}
+
+/* Cursor animation */
+.cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Engineer Section */
+.engineer-section {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker background for contrast */
+    padding: 60px 5%;
+    border-radius: 10px;
+    margin: 50px 5%;
+}
+
+.engineer-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.engineer-section p {
+    font-size: 1.2em;
+    color: var(--light-text);
+}
+
+.engineer-section a {
+    color: #007BFF; /* Facebook blue */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.engineer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Designer Section */
+.designer-section {
+    text-align: center;
+    padding: 60px 5%;
+}
+
+.designer-section p {
+    font-size: 1.2em;
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+
+/* Responsive Design (Basic) */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .greeting-avatar {
+        align-items: center;
+    }
+
+    .intro-text h2 {
+        font-size: 2.5em;
+    }
+
+    .engineer-section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .hero-section {
+        padding-top: 150px; /* More space for stacked header */
+    }
+
+    .avatar img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .intro-text h2 {
+        font-size: 2em;
+    }
+
+    .engineer-section h2 {
+        font-size: 1.8em;
+    }
+
+    .designer-section p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h2 {
+        font-size: 1.7em;
+    }
+
+    .engineer-section h2 {
+        font-size: 1.5em;
+    }
+
+    .name {
+        font-size: 2em;
+    }
+}
+:root {
+    --bg-color: #1A0D2F; /* Dark purple */
+    --accent-color: #8A2BE2; /* Purple highlight */
+    --text-color: #FFFFFF;
+    --light-text: #CCCCCC;
+    --line-color: rgba(138, 43, 226, 0.5); /* Semi-transparent purple for lines */
+    --glow-color: #8A2BE2;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+#cross-functional-team-section {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden; /* Important for orbital animation */
+}
+
+#cross-functional-team-section .container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    position: relative; /* For absolute positioning of elements inside */
+    padding-bottom: 200px; /* Space for the orbital ring */
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: var(--text-color);
+    margin-bottom: 80px;
+    line-height: 1.3;
+}
+
+.section-title .highlight {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Central Logo */
+.central-logo {
+    position: absolute;
+    bottom: 0; /* Aligns to the bottom of the container, adjusted by JS */
+    left: 50%;
+    transform: translate(-50%, 50%); /* Center horizontally and shift up by half its height */
+    z-index: 10;
+    width: 150px; /* Adjust size */
+    height: 150px; /* Adjust size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(138, 43, 226, 0.4) 0%, rgba(138, 43, 226, 0.1) 70%, transparent 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
+}
+
+.central-logo img {
+    max-width: 80%;
+    max-height: 80%;
+    filter: drop-shadow(0 0 10px var(--glow-color));
+}
+
+/* Top Tech Icons Wrapper */
+.tech-icons-top-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height based on icon distribution */
+    margin-bottom: 20px; /* Space between title and icons */
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align icons to the top of their container */
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+.tech-icon-item {
+    position: absolute; /* Will be positioned by JS */
+    width: 60px; /* Adjust icon size */
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 5;
+    padding: 10px; /* Padding inside the circle */
+}
+
+.tech-icon-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tech-icon-item:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 0 20px var(--glow-color);
+}
+
+/* Lines Container */
+.lines-container {
+    position: absolute;
+    top: 0; /* Aligned with the top of the container for positioning lines */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Spanning the full height to connect elements */
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 1; /* Below icons */
+}
+
+.connecting-line {
+    position: absolute;
+    height: 2px; /* Thickness of the line */
+    background: linear-gradient(to right, transparent, var(--line-color), transparent);
+    transform-origin: left center;
+    opacity: 0; /* Hidden by default, revealed on hover */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Orbital Ring */
+.orbital-ring {
+    position: absolute;
+    bottom: 0; /* Position relative to the bottom of the container */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 800px; /* Width of the orbital path */
+    height: 400px; /* Height of the orbital path (ellipse) */
+    border-radius: 50%;
+    border: 1px dashed rgba(138, 43, 226, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotateRing 30s linear infinite; /* Animates the ring itself for a subtle effect */
+    z-index: 2;
+}
+
+/* Keyframe for subtle ring rotation */
+@keyframes rotateRing {
+    from { transform: translate(-50%, 0) rotate(0deg); }
+    to { transform: translate(-50%, 0) rotate(360deg); }
+}
+
+.orbital-icon-item {
+    position: absolute; /* Positioned along the orbital path by JS */
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 8px;
+    animation: reverseRotate 30s linear infinite; /* Counter-rotates icons to appear static relative to page */
+}
+
+@keyframes reverseRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+.orbital-icon-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(200%); /* Make them white */
+    transition: filter 0.3s ease;
+}
+
+.orbital-icon-item:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.orbital-icon-item:hover img {
+    filter: grayscale(0%) brightness(100%); /* Color on hover */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 2em;
+    }
+    .central-logo {
+        width: 120px;
+        height: 120px;
+    }
+    .orbital-ring {
+        width: 600px;
+        height: 300px;
+    }
+    .orbital-icon-item {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 60px;
+    }
+    .central-logo {
+        width: 100px;
+        height: 100px;
+        bottom: 50px; /* Adjust bottom position for smaller screens */
+    }
+    .orbital-ring {
+        width: 450px;
+        height: 225px;
+    }
+    .orbital-icon-item {
+        width: 30px;
+        height: 30px;
+    }
+    .tech-icon-item {
+        width: 50px;
+        height: 50px;
+    }
+    .tech-icons-top-wrapper {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+    }
+    .central-logo {
+        width: 80px;
+        height: 80px;
+        bottom: 30px;
+    }
+    .orbital-ring {
+        width: 300px;
+        height: 150px;
+    }
+    .orbital-icon-item {
+        width: 25px;
+        height: 25px;
+    }
+    .tech-icon-item {
+        width: 40px;
+        height: 40px;
+    }
+    .tech-icons-top-wrapper {
+        height: 200px;
+    }
+}
+/* In work-experience-section.css */
+
+/* ... (Existing :root variables and general section styles) ... */
+
+#work-experience-section {
+    background-color: var(--primary-bg);
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.work-experience-header {
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.work-experience-header h2 {
+    font-size: 2.8em;
+    color: var(--text-color);
+}
+
+.work-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto; /* Add margin-bottom to separate from expanded view */
+}
+
+.work-card {
+    background: linear-gradient(145deg, rgba(30, 0, 60, 0.9), rgba(60, 0, 120, 0.7));
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+}
+
+.work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.6);
+}
+
+.card-image {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at center, rgba(138, 43, 226, 0.4), transparent 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.card-image img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+.card-content {
+    width: 100%;
+}
+
+.card-content h3 {
+    font-size: 1.8em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.card-content .card-short-desc {
+    font-size: 1em;
+    color: var(--light-text);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.learn-more-btn, .hide-details-btn { /* Apply styles to both buttons */
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+}
+
+.learn-more-btn:hover, .hide-details-btn:hover {
+    background-color: #A052EE;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.7);
+}
+
+/* NEW: Styles for the dedicated expanded project view */
+#project-expanded-view {
+    background: linear-gradient(145deg, rgba(30, 0, 60, 0.9), rgba(60, 0, 120, 0.7));
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px; /* Match grid max width */
+    margin: 0 auto;
+    display: flex; /* Horizontal layout */
+    align-items: center; /* Align items vertically */
+    gap: 40px; /* Space between image/content */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(138, 43, 226, 0.2);
+
+    /* Initial hidden state with transition */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: max-height 0.7s ease-out, opacity 0.7s ease-out, transform 0.7s ease-out, margin-top 0.7s ease-out, padding 0.7s ease-out; /* Include padding transition */
+}
+
+#project-expanded-view.active {
+    max-height: 1000px; /* Sufficient height to show content */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    margin-top: 60px; /* Space above this section */
+    padding: 40px; /* Restore padding when active */
+}
+
+.expanded-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 150px; /* Size for the featured image */
+    height: 150px;
+    background: radial-gradient(circle at center, rgba(138, 43, 226, 0.4), transparent 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+}
+
+.expanded-image img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.expanded-content {
+    flex-grow: 1; /* Allow content to take remaining space */
+    text-align: left; /* Align text within this section */
+}
+
+.expanded-content .expanded-title {
+    font-size: 2.5em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.expanded-content .expanded-short-desc {
+    font-size: 1.1em;
+    color: var(--light-text);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.expanded-content .expanded-long-desc {
+    font-size: 1em;
+    color: var(--text-color); /* Use primary text color for main content */
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding-top: 20px; /* Padding above long desc */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+}
+
+/* Hide details button specific margin */
+.expanded-content .hide-details-btn {
+    margin-top: 20px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .work-cards-grid {
+        gap: 30px;
+    }
+    .work-card {
+        padding: 25px;
+    }
+    .card-image {
+        width: 80px;
+        height: 80px;
+    }
+    .card-content h3 {
+        font-size: 1.5em;
+    }
+    .card-content .card-short-desc {
+        font-size: 0.9em;
+    }
+    .learn-more-btn {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+
+    /* Expanded view responsive */
+    #project-expanded-view {
+        flex-direction: column; /* Stack image and content */
+        padding: 30px;
+        gap: 20px;
+        text-align: center;
+    }
+    #project-expanded-view.active {
+        padding: 30px; /* Adjust padding for active state on smaller screens */
+    }
+    .expanded-image {
+        margin-bottom: 15px; /* Add space below image when stacked */
+        width: 120px;
+        height: 120px;
+    }
+    .expanded-content {
+        text-align: center;
+    }
+    .expanded-content .expanded-title {
+        font-size: 2.2em;
+    }
+    .expanded-content .expanded-short-desc {
+        font-size: 1em;
+    }
+    .expanded-content .expanded-long-desc {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-experience-header h2 {
+        font-size: 2.2em;
+    }
+    .work-cards-grid {
+        gap: 25px;
+    }
+    .work-card {
+        padding: 20px;
+    }
+    .card-content h3 {
+        font-size: 1.3em;
+    }
+    .card-content .card-short-desc {
+        font-size: 0.85em;
+    }
+
+    /* Expanded view responsive */
+    #project-expanded-view.active {
+        margin-top: 40px; /* Reduce top margin for smaller screens */
+        padding: 25px;
+    }
+    .expanded-image {
+        width: 100px;
+        height: 100px;
+    }
+    .expanded-content .expanded-title {
+        font-size: 1.8em;
+    }
+    .expanded-content .expanded-short-desc {
+        font-size: 0.9em;
+    }
+    .expanded-content .expanded-long-desc {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-experience-header h2 {
+        font-size: 1.6em;
+    }
+    .work-cards-grid {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+        gap: 20px;
+    }
+    .work-card {
+        padding: 15px;
+    }
+    .card-image {
+        width: 70px;
+        height: 70px;
+    }
+    .learn-more-btn, .hide-details-btn {
+        padding: 8px 15px;
+        font-size: 0.75em;
+    }
+
+    /* Expanded view responsive */
+    #project-expanded-view.active {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .expanded-image {
+        width: 80px;
+        height: 80px;
+    }
+    .expanded-content .expanded-title {
+        font-size: 1.5em;
+    }
+    .expanded-content .expanded-long-desc {
+        font-size: 0.8em;
+    }
+}
+
+/* In featured-project-section.css */
+
+#featured-project-section {
+    background-color: var(--primary-bg); /* Uses background from main style.css */
+    padding: 100px 5%; /* Generous padding */
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden; /* Important for visual effects */
+    text-align: left; /* Default text alignment */
+}
+
+.featured-content-wrapper {
+    display: flex;
+    flex-direction: row; /* Default: content on left, visuals on right */
+    align-items: center; /* Align items vertically */
+    justify-content: center;
+    max-width: 1400px; /* Wider section */
+    margin: 0 auto;
+    gap: 80px; /* Space between text and visuals */
+    position: relative; /* For animations */
+
+    /* Add a basic transition for entire content change */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Initial fade-out state for content transition */
+.featured-content-wrapper.fade-out {
+    opacity: 0;
+}
+
+.project-info {
+    flex: 1; /* Allows it to grow and shrink */
+    max-width: 50%; /* Limit text width */
+    padding-right: 20px; /* Space from visuals */
+}
+
+.section-heading {
+    font-size: 1.2em;
+    color: var(--light-text);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.project-title {
+    font-size: 3.5em; /* Large, prominent title */
+    color: var(--text-color);
+    margin-bottom: 25px;
+    line-height: 1.1;
+}
+
+.project-description {
+    font-size: 1.1em;
+    color: var(--light-text);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 500px; /* Constrain description width */
+}
+
+.project-visuals {
+    flex: 1; /* Allows it to grow and shrink */
+    position: relative;
+    min-height: 400px; /* Ensure enough space for mockups */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d; /* For 3D effects if any */
+}
+
+.visual-mockup {
+    position: absolute; /* Position mockups freely */
+    width: 550px; /* Base size of mockups */
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background behind mockups */
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Deep shadow */
+    transition: all 0.5s ease-in-out;
+    border: 1px solid rgba(138, 43, 226, 0.3); /* Purple border */
+}
+
+.visual-mockup img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below image */
+    border-radius: 10px;
+}
+
+.mockup-top {
+    z-index: 2; /* Ensure it's on top */
+    top: 0;
+    right: 0;
+    transform: rotate(5deg) scale(1); /* Slight rotation */
+    transform-origin: bottom left;
+}
+
+.mockup-bottom {
+    z-index: 1; /* Behind the top one */
+    bottom: -50px; /* Overlap with top */
+    left: 0;
+    transform: rotate(-8deg) scale(0.9); /* More rotation, slightly smaller */
+    transform-origin: top right;
+}
+
+/* Interactive elements: Navigation Dots */
+.project-navigation-dots {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: flex-start; /* Align with text */
+}
+
+.nav-dot {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.3); /* Inactive dot color */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.nav-dot:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+.nav-dot.active {
+    background-color: var(--accent-color); /* Active dot color */
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .featured-content-wrapper {
+        gap: 60px;
+    }
+    .project-info {
+        max-width: 45%;
+    }
+    .visual-mockup {
+        width: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .featured-content-wrapper {
+        flex-direction: column; /* Stack content and visuals vertically */
+        gap: 80px;
+    }
+    .project-info {
+        max-width: 100%; /* Allow info to take full width */
+        padding-right: 0;
+        text-align: center;
+    }
+    .project-title {
+        font-size: 3em;
+    }
+    .project-description {
+        max-width: 700px; /* Adjust max-width for stacked view */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project-navigation-dots {
+        justify-content: center; /* Center dots when content is centered */
+    }
+    .project-visuals {
+        min-height: 350px;
+    }
+    .visual-mockup {
+        width: 400px;
+    }
+    .mockup-top, .mockup-bottom {
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%) rotate(0deg) scale(1); /* Center and un-rotate */
+    }
+    .mockup-bottom {
+        bottom: -30px;
+        transform: translateX(-50%) scale(0.8); /* Keep it smaller and behind */
+    }
+}
+
+@media (max-width: 768px) {
+    #featured-project-section {
+        padding: 80px 3%;
+    }
+    .project-title {
+        font-size: 2.5em;
+    }
+    .project-description {
+        font-size: 1em;
+    }
+    .visual-mockup {
+        width: 320px;
+    }
+    .mockup-bottom {
+        bottom: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #featured-project-section {
+        padding: 60px 3%;
+    }
+    .project-title {
+        font-size: 2em;
+    }
+    .project-description {
+        font-size: 0.9em;
+    }
+    .project-visuals {
+        min-height: 250px;
+    }
+    .visual-mockup {
+        width: 250px;
+    }
+    .mockup-bottom {
+        bottom: -10px;
+    }
+}
+
+/* Add this to your existing style.css file */
+
+.download-resume-btn {
+    display: inline-block; /* Make it behave like a button */
+    background-color: var(--accent-color); /* Uses your defined accent color */
+    color: var(--text-color); /* Uses your defined text color */
+    padding: 15px 30px; /* Generous padding */
+    border-radius: 30px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Bold text */
+    font-size: 1.1em; /* Readable font size */
+    letter-spacing: 1px; /* Spaced out letters */
+    margin-top: 30px; /* Space above button */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4); /* Subtle shadow */
+}
+
+.download-resume-btn:hover {
+    background-color: #A052EE; /* Lighter purple on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.7); /* More prominent shadow */
+}
+
+/* Responsive adjustments for the button */
+@media (max-width: 768px) {
+    .download-resume-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .download-resume-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* In contact-section.css */
+
+#contact-section {
+    background-color: var(--primary-bg); /* Use your defined primary background color */
+    padding: 100px 5%; /* Consistent padding */
+    color: var(--text-color);
+    text-align: left;
+    max-width: 1200px; /* Limit width for readability */
+    margin: 0 auto; /* Center the section */
+}
+
+.contact-header h2 {
+    font-size: 2.8em;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.contact-content .contact-intro {
+    font-size: 1.2em;
+    color: var(--light-text);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 800px; /* Keep intro text readable */
+}
+
+.contact-content .contact-intro strong {
+    color: var(--accent-color); /* Highlight internship interest */
+    font-weight: 600;
+}
+
+.contact-details p {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contact-details a {
+    color: var(--text-color); /* White for regular state */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--accent-color); /* Accent color on hover */
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px; /* Space between icons */
+    margin-top: 40px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px; /* Size of social icons */
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background for icons */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+    background-color: var(--accent-color); /* Change background on hover */
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.5);
+}
+
+.social-links img {
+    width: 60%; /* Icon size inside its circle */
+    height: 60%;
+    object-fit: contain;
+    filter: invert(1) grayscale(100%); /* Make social icons white/monochrome by default if they are colored */
+    transition: filter 0.3s ease;
+}
+
+.social-links a:hover img {
+    filter: invert(0) grayscale(0) brightness(1); /* Restore original color on hover, or keep white/monochrome */
+    /* If your icons are originally colored and you want them to remain colored, just remove the default filter above */
+}
+
+/* Responsive Adjustments for Contact Section */
+@media (max-width: 768px) {
+    #contact-section {
+        padding: 80px 3%;
+    }
+    .contact-header h2 {
+        font-size: 2.2em;
+    }
+    .contact-content .contact-intro {
+        font-size: 1.1em;
+    }
+    .contact-details p {
+        font-size: 1.3em;
+    }
+    .social-links {
+        gap: 20px;
+        justify-content: center; /* Center social icons on smaller screens */
+    }
+    .social-links a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h2 {
+        font-size: 1.8em;
+    }
+    .contact-content .contact-intro {
+        font-size: 1em;
+    }
+    .contact-details p {
+        font-size: 1.1em;
+    }
+    .social-links {
+        gap: 15px;
+    }
+}
+
+/* In certificates-section.css */
+
+#certificates-section {
+    background-color: var(--primary-bg);
+    padding: 100px 5%;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.certificates-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.certificates-header h2 {
+    font-size: 3em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.certificates-header p {
+    font-size: 1.1em;
+    color: var(--light-text);
+}
+
+.certificate-cards-grid {
+    display: grid;
+    /* 2 to 4 columns depending on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.certificate-card {
+    background: linear-gradient(135deg, rgba(30, 0, 60, 0.9), rgba(50, 0, 100, 0.7));
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.7);
+}
+
+.cert-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px auto;
+    background: radial-gradient(circle at center, rgba(138, 43, 226, 0.5), transparent 70%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cert-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.cert-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.cert-authority, .cert-date {
+    font-size: 0.9em;
+    color: var(--light-text);
+    margin-bottom: 4px;
+}
+
+.view-cert-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-cert-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .certificate-cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .certificates-header h2 {
+        font-size: 2.5em;
+    }
+}
+@media (max-width: 480px) {
+    .certificate-cards-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically on mobile */
+    }
+}
