@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Naveen | 3D Interactive Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="overlay-gradient"></div>
+  <div class="noise-overlay"></div>
+
+    <header>
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-orb"></div>
+        <span>NAVEEN • 3D PORTFOLIO</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certificates" class="nav-link">Certificates</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+        <section id="hero">
+      <div class="hero">
+        <div class="hero-left">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>Actively looking for SDE / Full Stack Internships</span>
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span>Naveen</span><br />
+            I build interactive, 3D-inspired web experiences.
+          </h1>
+          <p class="hero-sub">
+            Frontend-focused developer who loves smooth animations, clean UI, and performance.
+            I mix design, code, and 3D to create experiences that stand out in a recruiter's tab.
+          </p>
+
+          <div class="hero-highlights">
+            <span class="pill">HTML • CSS • JavaScript</span>
+            <span class="pill">GSAP • Three.js</span>
+            <span class="pill">React (Optional)</span>
+            <span class="pill">Responsive UI</span>
+          </div>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary">View My Work ↗</a>
+            <a href="resume.pdf" class="btn-ghost">Download Resume</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <strong>10+</strong>
+              <span>Real & mini projects</span>
+            </div>
+            <div class="metric">
+              <strong>3+</strong>
+              <span>Internship tasks completed</span>
+            </div>
+            <div class="metric">
+              <strong>100%</strong>
+              <span>Ready to learn and grow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-profile-card tilt">
+            <div class="hero-profile-inner">
+              <div class="avatar">
+                <img src="logo/lap.png" height="100%" width="100%" alt="Developer Avatar"/>
+              </div>
+              <div>
+                <p class="hero-mini">Full Stack & Frontend Enthusiast</p>
+                <p class="hero-role">Turning ideas into animated, usable interfaces.</p>
+                <div class="hero-tags">
+                  <span class="hero-tag">3D Visuals</span>
+                  <span class="hero-tag">Clean Code</span>
+                  <span class="hero-tag">Team Player</span>
+                </div>
+                <div class="hero-status">
+                  <span>Available for internships & projects</span>
+                  <span class="status-pill">Open to Work</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="about">
+      <p class="section-label">About</p>
+      <h2 class="section-title">Who I Am</h2>
+      <p class="section-sub">
+        I love mixing design, logic, and animations to build websites that feel satisfying to use.
+        I enjoy learning by building projects, taking internships, and experimenting with UI ideas.
+      </p>
+
+      <div class="about-grid">
+        <div class="card tilt">
+          <div class="about-text">
+            I focus on writing clean, understandable code and crafting smooth user journeys.
+            I’m comfortable working across frontend and basic backend, and I enjoy taking ownership
+            from idea to final deployment.
+            <div class="about-list">
+              <div>
+                <div class="about-item-label">Current Focus</div>
+                <div class="about-item-value">Frontend / Full Stack Web Development</div>
+              </div>
+              <div>
+                <div class="about-item-label">Location</div>
+                <div class="about-item-value">India (IST) • Open to Remote</div>
+              </div>
+              <div>
+                <div class="about-item-label">Strengths</div>
+                <div class="about-item-value">UI, Logic, Consistency, Fast Learning</div>
+              </div>
+              <div>
+                <div class="about-item-label">Opportunities</div>
+                <div class="about-item-value">Internships & Entry-level SDE Roles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card tilt">
+          <div class="about-highlight">
+            <div class="about-highlight-row">
+              <span>Frontend</span><span>Advanced</span>
+            </div>
+            <div class="level-bar">
+              <div class="level-bar-fill" style="width: 88%"></div>
+            </div>
+
+            <div class="about-highlight-row">
+              <span>Backend</span><span>Intermediate</span>
+            </div>
+            <div class="level-bar">
+              <div class="level-bar-fill" style="width: 72%"></div>
+            </div>
+
+            <div class="about-highlight-row">
+              <span>Problem Solving</span><span>Intermediate</span>
+            </div>
+            <div class="level-bar">
+              <div class="level-bar-fill" style="width: 78%"></div>
+            </div>
+
+            <div class="about-highlight-row">
+              <span>Communication & Teamwork</span><span>Strong</span>
+            </div>
+            <div class="level-bar">
+              <div class="level-bar-fill" style="width: 82%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="skills">
+      <p class="section-label">Skills</p>
+      <h2 class="section-title">Tech Stack & Tools</h2>
+      <p class="section-sub">
+        Tools and technologies I’ve used in projects, internship tasks, and experiments.
+      </p>
+
+      <div class="skills-grid">
+        <div class="card tilt">
+          <h3>Frontend</h3>
+          <div class="skill-chip-group">
+            <span class="skill-chip">HTML5</span>
+            <span class="skill-chip">CSS3</span>
+            <span class="skill-chip">JavaScript (ES6+)</span>
+            <span class="skill-chip">React (optional)</span>
+            <span class="skill-chip">GSAP</span>
+            <span class="skill-chip">Three.js</span>
+            <span class="skill-chip">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="card tilt">
+          <h3>Backend & DB</h3>
+          <div class="skill-chip-group">
+            <span class="skill-chip">Node.js</span>
+            <span class="skill-chip">Express.js</span>
+            <span class="skill-chip">MongoDB / MySQL</span>
+            <span class="skill-chip">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+        <div class="card tilt">
+          <h3>Languages</h3>
+          <div class="skill-chip-group">
+            <span class="skill-chip">Java</span>
+            <span class="skill-chip">Flutter</span>
+            <span class="skill-chip">Python</span>
+          </div>
+        </div>
+
+        <div class="card tilt">
+          <h3>Tools & Platforms</h3>
+          <div class="skill-chip-group">
+            <span class="skill-chip">Git & GitHub</span>
+            <span class="skill-chip">VS Code</span>
+            <span class="skill-chip">Postman</span>
+            <span class="skill-chip">Netlify / Vercel</span>
+          </div>
+        </div>
+
+        <div class="card tilt">
+          <h3>Other Skills</h3>
+          <div class="skill-chip-group">
+            <span class="skill-chip">DSA (Basics)</span>
+            <span class="skill-chip">Problem Solving</span>
+            <span class="skill-chip">Time Management</span>
+            <span class="skill-chip">Team Collaboration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="projects">
+      <p class="section-label">Projects</p>
+      <h2 class="section-title">Work I'm Proud Of</h2>
+      <p class="section-sub">
+        A mix of internship tasks, challenge projects, and fun experiments that show how I design and build.
+      </p>
+
+      <div class="projects-grid">
+        <div class="card project-card tilt">
+          <h3>Smart Restaurant Menu & Navigation App</h3>
+          <p class="project-tagline">
+            Shows menus, ratings, and navigation to restaurants in a clean UI.
+          </p>
+          <div class="skill-chip-group">
+            <span class="skill-chip">HTML</span>
+            <span class="skill-chip">CSS</span>
+            <span class="skill-chip">JavaScript</span>
+          </div>
+          <div class="project-footer">
+            <span>Frontend + UX</span>
+            <a href="#" class="project-link">View Code ↗</a>
+          </div>
+        </div>
+
+        <div class="card project-card tilt">
+          <h3>Online Examination System </h3>
+          <p class="project-tagline">
+            Timer-based MCQ exam with scoring and result summary for internship task.
+          </p>
+          <div class="skill-chip-group">
+            <span class="skill-chip">HTML</span>
+            <span class="skill-chip">CSS</span>
+            <span class="skill-chip">JavaScript</span>
+          </div>
+          <div class="project-footer">
+            <span>Internship Task</span>
+            <a href="#" class="project-link">Live Demo ↗</a>
+          </div>
+        </div>
+
+        <div class="card project-card tilt">
+          <h3>Number Guessing Game</h3>
+          <p class="project-tagline">
+            A fun guessing game with nice feedback animations and clean layout.
+          </p>
+          <div class="skill-chip-group">
+            <span class="skill-chip">JavaScript</span>
+            <span class="skill-chip">DOM</span>
+          </div>
+          <div class="project-footer">
+            <span>Mini Project</span>
+            <a href="#" class="project-link">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="card project-card tilt">
+          <h3>ATM Simulation</h3>
+          <p class="project-tagline">
+            Simulates ATM functions like withdrawal, balance check, and validations.
+          </p>
+          <div class="skill-chip-group">
+            <span class="skill-chip">Core Java / JS</span>
+          </div>
+          <div class="project-footer">
+            <span>Logic & Flow</span>
+            <a href="#" class="project-link">Source Code ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="certificates">
+      <p class="section-label">Certificates</p>
+      <h2 class="section-title">Verified Learning & Achievements</h2>
+      <p class="section-sub">
+        Certificates that show my continuous learning. Replace text and links with your real credentials.
+      </p>
+
+      <div class="certs-grid">
+        <div class="cert-card tilt">
+          <span class="cert-pill">Frontend</span>
+          <div class="cert-title">HTML, CSS & JavaScript for Web Developers</div>
+          <div class="cert-org">Error Makes Clever Academy</div>
+          <div class="cert-meta">
+            <span>Year: 2024</span>
+            <a href="certification/html css.jpg" class="cert-view">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card tilt">
+          <span class="cert-pill">Programming</span>
+          <div class="cert-title">Java</div>
+          <div class="cert-org">Oracle</div>
+          <div class="cert-meta">
+            <span>Year: 2024</span>
+            <a href="certification/192311166-Naveen M M java.pdf" class="cert-view">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card tilt">
+          <span class="cert-pill">Programming</span>
+          <div class="cert-title">Database MySQL</div>
+          <div class="cert-org">Oracle</div>
+          <div class="cert-meta">
+            <span>Year: 2024</span>
+            <a href="certification/19231116-Naveen M M DBMS.pdf" class="cert-view">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card tilt">
+          <span class="cert-pill">Programming</span>
+          <div class="cert-title">Flutter</div>
+          <div class="cert-org">Error Makes Clever Academy</div>
+          <div class="cert-meta">
+            <span>Year: 2024</span>
+            <a href="certification//flutter.jpg" class="cert-view">View Credential ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card tilt">
+          <span class="cert-pill">Internship</span>
+          <div class="cert-title">Oneyes Infotech solution</div>
+          <div class="cert-org">Oneyes</div>
+          <div class="cert-meta">
+            <span>Role: Full Stack Developer intern</span>
+            <a href="certification/internship.jpg" class="cert-view">Offer / LOR ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-card tilt">
+          <span class="cert-pill">Program</span>
+          <div class="cert-title">Generative AI Mastermind</div>
+          <div class="cert-org">Outskill</div>
+          <div class="cert-meta">
+            <span>Year: 2025</span>
+            <a href="certification/Naveen_M_M_Certificate.pdf" class="cert-view">View Credential ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="contact">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Let’s Work Together</h2>
+      <p class="section-sub">
+        Open to internships, entry-level roles, and collaborations. Reach out and let’s build something.
+      </p>
+
+      <div class="contact-grid">
+        <div class="card contact-card tilt">
+          <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">
+              <a href="mailto:your-email@example.com">mmnaveen0513c@example.com</a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">
+              <a href="#" target="_blank">linkedin.com</a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">
+              <a href="https://github.com/NaveenNS07" target="_blank">github.com</a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">India (IST)</span>
+          </div>
+        </div>
+
+        <div class="card tilt">
+          <form onsubmit="event.preventDefault(); alert('This is a demo. Contact via email or LinkedIn!');">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me about the opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2025 Naveen. Built with HTML, CSS, JS, GSAP & Three.js.</span>
+    <div class="footer-links">
+      <a href="#hero">Back to top ↑</a>
+    </div>
+  </footer>
+
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
