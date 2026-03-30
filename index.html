@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveen M M — Full Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of Naveen M M — Full Stack Developer & AI Enthusiast building scalable, modern web applications." />
+    <link rel="icon" href="logo/mainlogo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <!-- ═══════════ PRELOADER ═══════════ -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <div class="preloader-ring"></div>
+            <span class="preloader-text">NM</span>
+        </div>
+    </div>
+
+    <!-- ═══════════ CUSTOM CURSOR ═══════════ -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav id="navbar" class="navbar">
+        <a href="#hero" class="nav-logo">Naveen M M</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="hero" class="hero">
+        <canvas id="particlesCanvas"></canvas>
+        <div class="hero-content reveal">
+            <p class="hero-greeting">Hi, I'm Naveen 👋</p>
+            <h1 class="hero-title">Full Stack<br /><span class="gradient-text">Developer</span></h1>
+            <div class="hero-subtitle">
+                <span class="typing-prefix">I build </span>
+                <span class="typing-text" id="typingText"></span>
+                <span class="typing-cursor">|</span>
+            </div>
+            <p class="hero-tagline">Crafting scalable web solutions with modern technologies &amp; AI</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Contact Me</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="30">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">LeetCode</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I'm a motivated <strong>Computer Science Engineering</strong> student passionate about
+                        <strong>Full Stack Development</strong>, <strong>AI</strong>, and building scalable solutions.
+                        I enjoy turning complex problems into clean, efficient code and intuitive user interfaces.
+                    </p>
+                    <p>
+                        With strong problem-solving skills and a relentless drive to learn, I'm eager to contribute to
+                        real-world projects that push boundaries and create meaningful impact.
+                    </p>
+                    <a href="resume.pdf" target="_blank" class="btn btn-primary" style="margin-top:1.5rem">
+                        <span>Download Resume</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="about-cards">
+                    <div class="strength-card reveal" style="--delay:.1s">
+                        <div class="strength-icon">🧠</div>
+                        <h3>Problem Solving</h3>
+                        <p>Analytical thinking to break down complex challenges into efficient solutions.</p>
+                    </div>
+                    <div class="strength-card reveal" style="--delay:.2s">
+                        <div class="strength-icon">🔄</div>
+                        <h3>Adaptability</h3>
+                        <p>Quick learner who thrives in fast-paced environments with new technologies.</p>
+                    </div>
+                    <div class="strength-card reveal" style="--delay:.3s">
+                        <div class="strength-icon">🤝</div>
+                        <h3>Collaboration</h3>
+                        <p>Team player who communicates clearly and contributes to shared goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SKILLS ═══════════ -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">02.</span> Skills &amp; Technologies
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category reveal" style="--delay:.1s">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-chip"><img src="logo/html.avif" alt="JS" class="skill-icon" />HTML</div>
+                        <div class="skill-chip"><img src="logo/css.png" alt="CSS" class="skill-icon" />CSS</div>
+                        <div class="skill-chip"><img src="logo/javascript.png" alt="JS" class="skill-icon" />JavaScript
+                        </div>
+                        <div class="skill-chip"><img src="logo/ReactLogo.png" alt="React" class="skill-icon" />React.js
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="90"></div>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--delay:.2s">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-chip"><img src="logo/nodejs.png" alt="Node" class="skill-icon" />Node.js</div>
+                        <div class="skill-chip"><img src="logo34/nodejs.png" alt="Express" class="skill-icon" />
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--delay:.3s">
+                    <h3 class="skill-category-title">Database</h3>
+                    <div class="skill-items">
+                        <div class="skill-chip"><img src="logo/mongodb.png" alt="Mongo" class="skill-icon" />MongoDB
+                        </div>
+                        <div class="skill-chip"><img src="logo/sql.png" alt="SQL" class="skill-icon" />MySQL</div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="80"></div>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--delay:.4s">
+                    <h3 class="skill-category-title">Tools &amp; Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-chip"><img src="logo/github.png" alt="Git" class="skill-icon" />Git</div>
+                        <div class="skill-chip">☁️ AWS</div>
+                        <div class="skill-chip">▲ Vercel</div>
+                        <div class="skill-chip"><img src="logo/leetcode.png" class="skill-icon"
+                                alt="LeetCode" />LeetCode</div>
+                        <div class="skill-chip">📹 WebRTC</div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="75"></div>
+                    </div>
+                </div>
+                <div class="skill-category reveal" style="--delay:.5s">
+                    <h3 class="skill-category-title">Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-chip"><img src="logo/java.png" alt="Java" class="skill-icon" />Java</div>
+                        <div class="skill-chip"><img src="logo/python.png" alt="Python" class="skill-icon" />Python
+                        </div>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="85"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ PROJECTS ═══════════ -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">03.</span> Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <article class="project-card reveal tilt-card" style="--delay:.1s">
+                    <div class="project-image">
+                        <img src="logo/fullstack.png" alt="Real Estate Listing Website" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="project-link" title="Live Demo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Full Stack</span>
+                        <h3 class="project-title">Real Estate Listing Website</h3>
+                        <p class="project-description">
+                            A full-stack application featuring login/signup, admin panel, AI-based property suggestions,
+                            an integrated chatbot, real-time chat &amp; video calls via WebRTC, mortgage &amp; ROI
+                            calculators.
+                        </p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>WebRTC</span>
+                            <span>AWS</span>
+                            <span>Vercel</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CERTIFICATIONS ═══════════ -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">04.</span> Certifications
+            </h2>
+            <div class="cert-grid">
+                <div class="cert-badge reveal" style="--delay:.1s">
+                    <div class="cert-icon"><img src="logo/java.png" alt="Java" /></div>
+                    <h3>Oracle Java SE 11</h3>
+                    <p>Oracle Corporation</p>
+                    <a href="certification/192311166-Naveen M M java.pdf" target="_blank" class="cert-view-btn">View
+                        Certificate →</a>
+                </div>
+                <div class="cert-badge reveal" style="--delay:.2s">
+                    <div class="cert-icon"><img src="logo/sql.png" alt="SQL" /></div>
+                    <h3>Oracle SQL</h3>
+                    <p>Oracle Corporation</p>
+                    <a href="certification/19231116-Naveen M M DBMS.pdf" target="_blank" class="cert-view-btn">View
+                        Certificate →</a>
+                </div>
+                <div class="cert-badge reveal" style="--delay:.3s">
+                    <div class="cert-icon"><img src="logo/python.png" alt="Python" /></div>
+                    <h3>Python for Data Science</h3>
+                    <p>NPTEL</p>
+                    <a href="certification/Naveen_M_M_Certificate.pdf" target="_blank" class="cert-view-btn">View
+                        Certificate →</a>
+                </div>
+                <div class="cert-badge reveal" style="--delay:.4s">
+                    <div class="cert-icon"><img src="logo/google.avif" alt="GCP" /></div>
+                    <h3>Frontend Development</h3>
+                    <p>Error Makes Clever</p>
+                    <a href="certification/html css.jpg" target="_blank" class="cert-view-btn">View Certificate →</a>
+                </div>
+                <div class="cert-badge reveal" style="--delay:.5s">
+                    <div class="cert-icon"><img src="logo/flutter.png" alt="Flutter" /></div>
+                    <h3>Flutter</h3>
+                    <p>Error Makes Clever</p>
+                    <a href="certification/flutter.jpg" target="_blank" class="cert-view-btn">View Certificate →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">05.</span> Experience
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item reveal" style="--delay:.1s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">August 2025 - October 2025</span>
+                        <h3>Full Stack Developer Intern</h3>
+                        <p>
+                            Developed a <strong>Real Estate Listing Web Application</strong> using modern full-stack
+                            technologies to manage
+                            property listings, user interactions, and admin controls. Implemented features such as
+                            secure authentication,
+                            advanced search and filtering, AI-based property recommendations, and chatbot support.
+                            Integrated real-time
+                            chat and video calling using WebRTC, and designed mortgage and ROI calculators. Deployed the
+                            application using
+                            cloud platforms ensuring scalability and performance.
+                        </p>
+
+                        <div class="timeline-tags">
+                            <span>React.js</span><span>Node.js</span><span>MongoDB</span><span>WebRTC</span><span>AWS</span><span>Vercel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal" style="--delay:.25s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">November 2025 — December 2025</span>
+                        <h3>Python Developer Intern</h3>
+                        <p>
+                            Developed a <strong>Library Management System</strong> using Python to manage book records,
+                            users, and transactions efficiently. Implemented core functionalities such as book
+                            issue/return, search, and user management. Designed a structured, scalable codebase using
+                            modular programming and improved data handling through optimized logic.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>Modular Design</span><span>Debugging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ ACHIEVEMENTS ═══════════ -->
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">06.</span> Achievements
+            </h2>
+            <div class="achievements-grid">
+                <div class="achievement-card reveal" style="--delay:.1s">
+                    <div class="achievement-icon">⚡</div>
+                    <h3>Fast Learner &amp; Adaptable</h3>
+                    <p>Quickly pick up new technologies and frameworks, adapting to project needs with ease.</p>
+                </div>
+                <div class="achievement-card reveal" style="--delay:.2s">
+                    <div class="achievement-icon">🏗️</div>
+                    <h3>Real-World Applications</h3>
+                    <p>Built scalable, production-grade apps using modern full-stack technologies.</p>
+                </div>
+                <div class="achievement-card reveal" style="--delay:.3s">
+                    <div class="achievement-icon">☁️</div>
+                    <h3>Cloud &amp; Full-Stack Expertise</h3>
+                    <p>Strong knowledge of AWS, Vercel, and end-to-end web architecture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-number">07.</span> Get In Touch
+            </h2>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <p class="contact-lead">
+                        I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                        my inbox is always open!
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:naveenmm1507@gmail.com" class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>naveenmm1507@gmail.com</span>
+                        </a>
+                        <a href="tel:+919047667094" class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span>+91 9047667094</span>
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/" target="_blank" class="social-btn" title="LinkedIn">
+                            <img src="logo/linkedin.png" alt="LinkedIn" />
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="social-btn" title="GitHub">
+                            <img src="logo/github.png" alt="GitHub" />
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form glass-card reveal" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="formName" name="name" required placeholder=" " />
+                        <label for="formName">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="formEmail" name="email" required placeholder=" " />
+                        <label for="formEmail">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="formMessage" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="formMessage">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed &amp; Built by <strong>Naveen M M</strong></p>
+            <p class="footer-sub">&copy; 2025 — All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
