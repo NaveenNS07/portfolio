@@ -77,7 +77,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--nav-h)
+  scroll-padding-top: var(--nav-h);
+  overflow-x: hidden;
 }
 
 body {
@@ -85,6 +86,8 @@ body {
   background: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   transition: background var(--transition), color var(--transition);
   cursor: none;
 }
@@ -367,7 +370,8 @@ ul {
 /* ═══ SECTIONS ═══ */
 .section {
   padding: 6rem 0;
-  position: relative
+  position: relative;
+  overflow: hidden;
 }
 
 .section::before {
@@ -1631,12 +1635,14 @@ ul {
 
   .hero-stats {
     flex-direction: column;
-    gap: 1rem
+    gap: 1rem;
+    align-items: center;
   }
 
   .stat-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: .5rem
   }
 
@@ -1653,7 +1659,7 @@ ul {
   }
 
   .cert-grid {
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr
   }
 }
 
